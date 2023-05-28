@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css: -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- google fonts: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+    <!-- font awesome: -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div
+        style="display: flex;flex-direction: row;align-items: center;width: 100vw;background-color: #ff0078;position: sticky;top:0;margin-bottom: 50px;z-index: 1;">
+        <h2 style="color: white;font-size:50px;margin-left: 7px;">Home Price Prediction</h2>
+
+        <ul style="list-style-type: none;font-size: 30px;position: absolute;right: 1em;display: flex;">
+            <li style="margin: 5px;">
+                <a href="https://github.com/CodeLikeAyush" target="_blank" style="color: black;"><i
+                        class="fa-brands fa-github"></i></a>
+            </li>
+            <li style="margin: 5px;">
+                <a href="https://www.linkedin.com/in/ayush-raj-b31404224/" target="_blank" style="color: #003eff;"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- prediction form: -->
+    <div id="predict_div">
+        <form action="#">
+            <label for="myLocation">Location*</label>
+            <input list="locations" name="location" id="myLocation" placeholder="Search For A Location" required />
+            <datalist id="locations">
+                <!-- these elements will be injected by javascript dynamically: -->
+                <!-- <option value="1st Block Jayanagar"></option> -->
+            </datalist>
+
+
+            <label for="myArea">Area*</label>
+            <input type="number" name="area" id="myArea" placeholder="Area Of House ( Sqare Feet )" min="400" required>
+
+
+            <label for="myBathroom">Bathrooms*</label>
+            <input type="number" name="bathroom" id="myBathroom" placeholder="Number Of Bathrooms" required>
+
+            <label for="myBHK">BHK*</label>
+            <input type="number" name="bhk" id="myBHK" placeholder="Number Of BHK" required>
+
+            <button type="reset">Clear Fields</button>
+
+            <button type="submit" onsubmit="predict">Predict</button>
+
+        </form>
+    </div>
+
+
+
+    <br><br><br><br><br>
+
+    <!-- predicted result table: -->
+    <h2 style="color: white;text-align: center;font-size:40px;">RESULTS</h2>
+    <br>
+    <hr><br>
+    <div id="results">
+        <h1 style='text-align:center;'>Nothing to show</h1>
+        <!-- <table>
+            rows will be inserted here using javascript on prediction
+        </table> -->
+
+
+    </div>
+    <br><br><br><br><br><br>
+    <!-- spinner------------- -->
+    <div class="lds-roller" id="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+
+    <!-- footer: -->
+    <div class="footer"
+        style="width: 100vw;height: 100px;background-color: #ff0078;display: flex;flex-direction: column; align-items: center;justify-content: center;">
+        <h3>© 2021 Copyright : ayush raj</h3>
+        <h3>LICENSE : MIT</h3>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
